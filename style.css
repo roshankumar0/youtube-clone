@@ -15,16 +15,21 @@
     --yt-button: #f9f9f9;
     --yt-h2: #606060;
     --yt-spec-brand-background-primary: rgba(255, 255, 255, 0.98);
+    --yt-border: rgba(0, 0, 0, 0.1);
+    --yt-text-secondary: #606060;
+    --yt-padding-top-bottom: padding: 12px 0;
 }
-h2{
+
+h2 {
     padding: 8px 24px;
     display: block;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-   color: var(--yt-h2);
+    color: var(--yt-h2);
 }
+
 /* here goes header start */
 .yt-header {
     height: 56px;
@@ -162,23 +167,27 @@ i.fa-solid.fa-microphone {
     width: min(100%, 240px);
     padding: 0 20px;
 }
-
+.yt-aside-navbar{
+    padding: var(--yt-padding-top-bottom);
+}
 .yt-aside li {
     list-style: none;
     display: flex;
     align-items: center;
     padding: 0 24px;
-    background-color: #d3d3d3;
+    
+   }
 
-}
-
-.yt-aside li:hover {
-    background-color: aquamarine;
+.yt-aside li a:hover {
+    background-color: var;
+    display: block;
+    color: #030303;
+    font-weight: 600;
 }
 
 .yt-aside li i {
     margin-right: 24px;
-   }
+}
 
 .yt-aside li a {
     overflow: hidden;
@@ -195,14 +204,37 @@ i.fa-solid.fa-microphone {
     color: var(--yt-text-primary);
     text-transform: capitalize;
 }
-
-.yt-aside li a:hover {
-    font-weight: 500;
-    color: red;
-}
-
 .yt-main-content {
     background-color: #eee;
+}
+
+.yt-footer {
+    border-top: 1px solid var(--yt-border);
+    padding: 16px 24px 0;
+}
+.yt-guide-line-pramary,.yt-guide-line-secondary{
+padding: var(--yt-padding-top-bottom);
+
+}
+
+.yt-footer a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--yt-text-secondary);
+    text-transform: capitalize;
+    display: inline-block;
+}
+.yt-copyright{
+    padding: 16px 0px;
+    color: var(--yt-text-secondary);
+    font-family: "Roboto","Arial",sans-serif;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 /* here goes yt-content end */
