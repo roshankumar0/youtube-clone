@@ -6,9 +6,6 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow-y: scroll;
-}
 
 :root {
     --yt-font-family: "Roboto", "Arial", sans-serif;
@@ -48,6 +45,7 @@ h2 {
     background-color: var(--yt-spec-brand-background-primary);
     position: sticky;
     top: 0;
+    background-color: #fff;
 }
 
 .yt-icon.ytd-logo {
@@ -161,16 +159,17 @@ i.fa-solid.fa-microphone {
 /* here goes yt-content start */
 .yt-grid {
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 1fr 1fr;
+    background: #f0f0f0;
 }
 
 .yt-aside {
     color: var(--yt-text-primary);
     overflow: auto;
-
+    background: #fff
 }
 
-.yt-aside__fixed{
+.yt-aside__fixed {
     overflow: auto;
     width: min(100%, 240px);
     position: fixed;
@@ -179,11 +178,12 @@ i.fa-solid.fa-microphone {
 
 
 }
-.yt-aside ::-webkit-scrollbar {
-	width: 1px;
-   
 
-	
+.yt-aside ::-webkit-scrollbar {
+    width: 1px;
+
+
+
 }
 
 .yt-aside li {
@@ -197,7 +197,7 @@ i.fa-solid.fa-microphone {
 }
 
 .yt-aside li:hover, .active {
-    background: var(--yt-active-color);
+    background-color: var(--yt-searchbox-border-color);
 }
 
 .yt-aside li a:hover {
@@ -266,22 +266,26 @@ i.fa-solid.fa-microphone {
     display: grid;
     grid-gap: 10px;
     padding: 10px;
+    padding-right: 0;
 }
 
 .yt-filter-bar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     overflow: auto;
     white-space: nowrap;
     border-top: 1px solid var(--yt-border);
     border-bottom: 1px solid var(--yt-border);
-    margin-top: -13px;
+    margin-top: -10px;
     background: #fff;
     margin-left: -12px;
     position: sticky;
-    top: 60px;
+    top: 55px;
+
+}
+
+.yt-filter-bar::-webkit-scrollbar {
+    width: 1px;
 }
 
 .yt-filter-bar li {
@@ -315,8 +319,11 @@ i.fa-solid.fa-microphone {
     background: var(--yt-background);
     transition: background-color 0.5s cubic-bezier(0.05, 0, 0, 1);
     margin: 12px;
-    margin-left: 0;
+}
 
+.yt-filter-bar li .active {
+    background: var(--yt-text-primary);
+    color: #ccc;
 }
 
 .yt-filter-bar li a:hover {
@@ -329,7 +336,7 @@ i.fa-solid.fa-microphone {
     margin-right: 8px;
     display: grid;
     grid-template-columns: repeat(4, 250px);
-    gap: 20px;
+    gap: 10px;
     margin-top: 24px;
     border-bottom: 4px solid var(--yt-border);
     margin-bottom: 40px;
@@ -387,7 +394,7 @@ i.fa-solid.fa-microphone {
 .yt-shorts-list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
@@ -414,3 +421,48 @@ i.fa-solid.fa-microphone {
 }
 
 /* here goes yt-main-content end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* here goes meadia query for Mobile start */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .yt-grid, .yt-vides-list, .yt-shorts-list {
+        grid-template-columns: 1fr;
+    }
+
+    .yt-aside__fixed {
+        position: unset;
+        width: min(100%, 100%);
+    }
+
+    .yt-center {
+        display: none;
+    }
+}
+
+/* here goes meadia query for Mobile end */
+
+
+/* here goes meadia query for tablet start */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .yt-grid {
+        grid-template-columns: 240px 1fr;
+    }
+
+    .yt-shorts-list, .yt-vides-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* here goes meadia query for tablet start */
