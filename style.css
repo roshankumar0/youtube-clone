@@ -436,7 +436,7 @@ i.fa-solid.fa-microphone {
 
 
 /* here goes meadia query for Mobile start */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media (max-device-width : 480px) {
     .yt-grid, .yt-vides-list, .yt-shorts-list {
         grid-template-columns: 1fr;
     }
@@ -444,6 +444,8 @@ i.fa-solid.fa-microphone {
     .yt-aside__fixed {
         position: unset;
         width: min(100%, 100%);
+        margin-bottom: 20px;
+        height: fit-content;
     }
 
     .yt-center {
@@ -455,13 +457,25 @@ i.fa-solid.fa-microphone {
 
 
 /* here goes meadia query for tablet start */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+    
     .yt-grid {
-        grid-template-columns: 240px 1fr;
+        grid-template-columns: 1fr;
+      
+    }
+    .yt-aside__fixed{
+        position: unset;
+        width: min(100%, 100%);
+        margin-bottom: 20px;
+        height: fit-content;
     }
 
     .yt-shorts-list, .yt-vides-list {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .yt-center {
+        display: none;
     }
 }
 
