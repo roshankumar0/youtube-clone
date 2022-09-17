@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/x-icon" href="/image/logo.png">
+    <link rel="icon" type="image/x-icon" href="/image/favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <title>youtube</title>
+    <title>YouTube</title>
 </head>
 
 <body>
     <header class="yt-header">
         <div class="yt-header__left">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars" id="bars"></i>
         </div>
         <div class="yt-center">
             <div class="search-box">
@@ -33,7 +33,7 @@
         </div>
     </header>
     <div class="yt-grid">
-        <aside class="yt-aside">
+        <aside class="yt-aside" id="aside">
             <div class="yt-aside__fixed">
                 <ul class="yt-aside-navbar">
                     <li class="active"><i class="fa-sharp fa-solid fa-house"></i><a href="#">home</a></li>
@@ -102,9 +102,46 @@
 
             </ul>
             <div class="yt-vides-list">
+                <div class="yt-list__card">
+                    <div class="yt-vides-list__item">
+                        <div class="yt-img">
+                            <img src="/image/hq720_2.webp" alt="">
+                        </div>
+                        <div class="yt-title">
+                            <div class="yt-profile-img">
+                                <img src="/image/img4.png" alt="" height="36px" width="36px">
+                            </div>
+                            <div class="yt-video-details">
+                                <h4>Bheegi Yaadein Audio Track</h4>
+                                <div>
+                                    <div class="yt-user-name">Sun Shine Record</div>
+                                    <div class="yt-user-subscribers">
+
+                                    </div>
+                                    <div class="yt-user-views-upload">
+                                        <div class="yt-user-views">2.7K watching</div>
+                                        <div class="yt-user__live">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon"
+                                                style="pointer-events: none;  width: 16px; height: 16px;">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14,12c0,1.1-0.9,2-2,2s-2-0.9-2-2s0.9-2,2-2S14,10.9,14,12z M8.48,8.45L7.77,7.75C6.68,8.83,6,10.34,6,12 s0.68,3.17,1.77,4.25l0.71-0.71C7.57,14.64,7,13.39,7,12S7.57,9.36,8.48,8.45z M16.23,7.75l-0.71,0.71C16.43,9.36,17,10.61,17,12 s-0.57,2.64-1.48,3.55l0.71,0.71C17.32,15.17,18,13.66,18,12S17.32,8.83,16.23,7.75z M5.65,5.63L4.95,4.92C3.13,6.73,2,9.24,2,12 s1.13,5.27,2.95,7.08l0.71-0.71C4.02,16.74,3,14.49,3,12S4.02,7.26,5.65,5.63z M19.05,4.92l-0.71,0.71C19.98,7.26,21,9.51,21,12 s-1.02,4.74-2.65,6.37l0.71,0.71C20.87,17.27,22,14.76,22,12S20.87,6.73,19.05,4.92z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span>LIVE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="yt-vides-list__item">
-                    <iframe src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
-                    </iframe>
+                    <div class="yt-img">
+                        <img src="/image/hq720_2.webp" alt="">
+                    </div>
                     <div class="yt-title">
                         <div class="yt-profile-img">
                             <img src="/image/img4.png" alt="" height="36px" width="36px">
@@ -125,8 +162,9 @@
                     </div>
                 </div>
                 <div class="yt-vides-list__item">
-                    <iframe src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
-                    </iframe>
+                    <div class="yt-img">
+                        <img src="/image/hq720_2.webp" alt="">
+                    </div>
                     <div class="yt-title">
                         <div class="yt-profile-img">
                             <img src="/image/img4.png" alt="" height="36px" width="36px">
@@ -147,8 +185,9 @@
                     </div>
                 </div>
                 <div class="yt-vides-list__item">
-                    <iframe src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
-                    </iframe>
+                    <div class="yt-img">
+                        <img src="/image/hq720_2.webp" alt="">
+                    </div>
                     <div class="yt-title">
                         <div class="yt-profile-img">
                             <img src="/image/img4.png" alt="" height="36px" width="36px">
@@ -169,8 +208,9 @@
                     </div>
                 </div>
                 <div class="yt-vides-list__item">
-                    <iframe src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
-                    </iframe>
+                    <div class="yt-img">
+                        <img src="/image/hq720_2.webp" alt="">
+                    </div>
                     <div class="yt-title">
                         <div class="yt-profile-img">
                             <img src="/image/img4.png" alt="" height="36px" width="36px">
@@ -191,8 +231,9 @@
                     </div>
                 </div>
                 <div class="yt-vides-list__item">
-                    <iframe src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
-                    </iframe>
+                    <div class="yt-img">
+                        <img src="/image/hq720_2.webp" alt="">
+                    </div>
                     <div class="yt-title">
                         <div class="yt-profile-img">
                             <img src="/image/img4.png" alt="" height="36px" width="36px">
@@ -213,14 +254,15 @@
                     </div>
                 </div>
                 <div class="yt-vides-list__item">
-                    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
-                    </iframe>
-                    <div>
+                    <div class="yt-img">
+                        <img src="/image/hq720_2.webp" alt="">
+                    </div>
+                    <div class="yt-title">
                         <div class="yt-profile-img">
-                            <img src="" alt="">
+                            <img src="/image/img4.png" alt="" height="36px" width="36px">
                         </div>
                         <div class="yt-video-details">
-                            <h4>Bheegi Yaadein Audio Track Album Jal Pari Atif Aslam #atifaslam</h4>
+                            <h4>Bheegi Yaadein Audio Track</h4>
                             <div>
                                 <div class="yt-user-name">Sun Shine Record</div>
                                 <div class="yt-user-subscribers">
@@ -235,36 +277,15 @@
                     </div>
                 </div>
                 <div class="yt-vides-list__item">
-                    <iframe src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
-                    </iframe>
-                    <div>
-                        <div class="yt-profile-img">
-                            <img src="" alt="">
-                        </div>
-                        <div class="yt-video-details">
-                            <h4>Bheegi Yaadein Audio Track Album Jal Pari Atif Aslam #atifaslam</h4>
-                            <div>
-                                <div class="yt-user-name">Sun Shine Record</div>
-                                <div class="yt-user-subscribers">
-
-                                </div>
-                                <div class="yt-user-views-upload">
-                                    <div class="yt-user-views">1.7K views.</div>
-                                    <div class="yt-user-upload-date">8 days ago</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="yt-img">
+                        <img src="/image/hq720_2.webp" alt="">
                     </div>
-                </div>
-                <div class="yt-vides-list__item">
-                    <iframe src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
-                    </iframe>
-                    <div>
+                    <div class="yt-title">
                         <div class="yt-profile-img">
-                            <img src="" alt="">
+                            <img src="/image/img4.png" alt="" height="36px" width="36px">
                         </div>
                         <div class="yt-video-details">
-                            <h4>Bheegi Yaadein Audio Track Album Jal Pari Atif Aslam #atifaslam</h4>
+                            <h4>Bheegi Yaadein Audio Track</h4>
                             <div>
                                 <div class="yt-user-name">Sun Shine Record</div>
                                 <div class="yt-user-subscribers">
@@ -388,7 +409,7 @@
             </div>
         </div>
     </div>
-
+    <script src="/index.js"></script>
 </body>
 
 </html>
