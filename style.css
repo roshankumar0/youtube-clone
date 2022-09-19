@@ -28,16 +28,6 @@
     cursor: pointer;
 }
 
-h2 {
-    padding: 8px 24px;
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: var(--yt-h2);
-}
-
 /* here goes header start */
 .yt-header {
     height: 56px;
@@ -182,6 +172,16 @@ i.fa-solid.fa-microphone {
 
 }
 
+.yt-aside__fixed h2 {
+    padding: 8px 24px;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--yt-h2);
+}
+
 .yt-aside ::-webkit-scrollbar {
     width: 1px;
 
@@ -284,6 +284,7 @@ i.fa-solid.fa-microphone {
     margin-left: -12px;
     position: sticky;
     top: 55px;
+    z-index: 4;
 
 }
 
@@ -412,19 +413,27 @@ img {
     object-fit: cover;
 }
 
-.yt-mix-playlist__link {
-    height: 24px;
-    width: 24px;
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    right: 0;
-    color: #fff;
+.yt-link {
+    width: 28px;
+    height: 28px;
     padding: 3px 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
 }
 
-.yt-mix-playlist__link svg {
-    color: #fff;
+.yt-mix-playlist__link {
+    padding: 3px 4px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    right: 8px;
+    bottom: 8px;
+    fill: #fff;
+    background: var(--yt-text-primary);
 }
 
 .yt-mix-playlist__icons {
@@ -432,8 +441,9 @@ img {
     width: 100%;
     position: absolute;
     background-color: rgba(89, 75, 55, 0.8);
-    z-index: 10;
+    z-index: 3;
     bottom: 0;
+    right: 0;
 
 
 }
@@ -464,6 +474,8 @@ img {
 
 .yt-vides-list h4 {
     margin: 12px 0 4px 0;
+    color: #030303;
+    font-weight: 500;
 }
 
 .yt-video-details {
@@ -542,7 +554,11 @@ img {
 .yt-shorts {
     justify-content: space-between;
     display: flex;
-    flex-direction: row;
+    margin: 24px 0 24px 8px;
+}
+
+.yt-shorts-logo {
+    margin-right: 8px;
 }
 
 .yt-shorts h2 {
@@ -550,13 +566,20 @@ img {
     font-family: "Roboto", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 300;
-
+    text-transform: uppercase;
 }
 
 .yt-shorts-list img {
     height: 350px;
 }
 
+.yt-shorts-list-head {
+    display: flex;
+    align-items: center;
+}
+.yt-cross{
+    display: flex;
+}
 /* here goes yt-main-content end */
 /* here goes meadia query for Mobile start */
 @media (max-device-width : 480px) {
