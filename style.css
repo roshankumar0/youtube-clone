@@ -56,11 +56,6 @@
     flex-direction: row;
 }
 
-.yt-icon {
-    width: 16px;
-    height: 16px;
-}
-
 .yt-header__center {
     flex: 0 1 728px;
     min-width: 0px;
@@ -209,8 +204,10 @@ i.fa-solid.fa-microphone {
     font-weight: 500;
 }
 
-.yt-aside li i {
+.yt-aside li svg {
     margin-right: 24px;
+    height: 24px;
+    width: 24px;
 }
 
 .yt-aside li a {
@@ -335,15 +332,13 @@ i.fa-solid.fa-microphone {
 }
 
 .yt-vides-list {
-    padding-bottom: 48px;
     margin-left: 8px;
     margin-right: 8px;
     display: grid;
-    grid-template-columns: repeat(4, 265.895px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 24px;
     border-bottom: 4px solid var(--yt-border);
-    margin-bottom: 40px;
     color: #606060;
     font-family: "Roboto", "Arial", sans-serif;
 }
@@ -542,7 +537,7 @@ img {
 
 .yt-shorts-list {
     display: grid;
-    grid-template-columns: repeat(6, 171px);
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -555,6 +550,7 @@ img {
     justify-content: space-between;
     display: flex;
     margin: 24px 0 24px 8px;
+    height: 40px;
 }
 
 .yt-shorts-logo {
@@ -577,9 +573,19 @@ img {
     display: flex;
     align-items: center;
 }
-.yt-cross{
+
+.yt-cross-shorts svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #606060;
+
+}
+
+.yt-cross {
     display: flex;
 }
+
 /* here goes yt-main-content end */
 /* here goes meadia query for Mobile start */
 @media (max-device-width : 480px) {
