@@ -226,6 +226,17 @@ i.fa-solid.fa-microphone {
     text-transform: capitalize;
 }
 
+.yt-live-user img {
+    border-radius: 50px;
+    object-fit: cover;
+    margin-right: 24px;
+}
+
+.yt-live-user li svg {
+    margin-right: auto;
+    fill: #f00;
+}
+
 .yt-footer {
     border-top: 1px solid var(--yt-border);
     padding: 16px 24px 0;
