@@ -10,3 +10,19 @@ bars.addEventListener('click', function () {
         aside.style.display = "none"
     }
 })
+
+
+
+
+
+
+document.querySelectorAll('.yt-img-element').forEach(elem => {
+    
+    elem.addEventListener('mouseover', function(e){
+        e.target.classList.add('is-hovering')
+    });
+
+    elem.addEventListener('mouseleave', function(e){
+        e.target.classList.remove('is-hovering')
+    });
+});
