@@ -293,7 +293,7 @@ i.fa-solid.fa-microphone {
     position: sticky;
     top: 55px;
     z-index: 4;
-    max-width: 1110px;
+    width: 100%;
 
 
 }
@@ -423,11 +423,10 @@ img {
 
 .yt-img img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
-.yt-link {
+/* .yt-link {
     width: 28px;
     height: 28px;
     padding: 3px 4px;
@@ -436,7 +435,7 @@ img {
     align-items: center;
     justify-content: center;
     border-radius: 2px;
-}
+} */
 
 .yt-mix-playlist__link {
     padding: 3px 4px;
@@ -463,9 +462,7 @@ img {
 }
 
 .yt-show-now {
-    width: 200px;
     color: #fff;
-    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -475,7 +472,7 @@ img {
     align-items: center;
 }
 
-.yt-img:hover, .yt-show-now {
+.yt-img:hover {
     -webkit-filter: brightness(70%);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -484,20 +481,19 @@ img {
     transition: all 1s ease;
 }
 
-/* .yt-img .yt-show-now:hover {
-    background-color: red;
-    width: 200px;
-    height: 100px;
-    display: block;
-} */
+
+.yt-img-element.is-hovering+.yt-show-now {
+    display: inline-block;
+}
 
 .yt-show-now h2 {
     font-size: 20px;
 }
 
 .yt-show-now svg {
-    width: 50px;
+    width: 24px;
     fill: #fff;
+    margin-right: 4px;
 }
 
 .yt-title {
@@ -525,12 +521,13 @@ img {
 
 }
 
+/* 
 .yt-vides-list__item:hover {
     transform: scale(1.2);
     z-index: 10;
     box-shadow: inset 0px 0px 0px 2px gray;
     transition: all 0.2s;
-}
+} */
 
 .yt-shorts-list img {
     width: 100%;
@@ -542,6 +539,15 @@ img {
     margin: 12px 0 4px 0;
     color: #030303;
     font-weight: 500;
+
+    /* overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 230px;
+    background-color: red; */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .yt-video-details {
@@ -550,6 +556,21 @@ img {
     font-weight: 500;
     padding-right: 24px;
 
+}
+
+.yt-video-details h4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 12px 0 4px 0;
+    color: #030303;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.yt-user-views {
+    font-size: 14px;
 }
 
 .yt-user-name {
@@ -607,16 +628,14 @@ img {
 }
 
 .yt-shorts-list {
-    display: flex;
+    display: grid;
     gap: 10px;
     margin-bottom: 20px;
     max-width: 1110px;
     flex-wrap: wrap;
     padding: 0 20px;
-}
+    grid-template-columns: repeat(6, 1fr);
 
-.yt-shorts-list>.yt-shorts-list {
-    width: 162px;
 }
 
 .yt-shorts {
@@ -647,7 +666,11 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #606060;
+    fill: #606060;
+    margin-right: 40px;
+    width: 20px;
+    width: 20px;
+    font-size: 20px;
 
 }
 
@@ -658,8 +681,9 @@ img {
 /* here goes yt-main-content end */
 /* here goes meadia query for Mobile start */
 @media (max-device-width : 480px) {
-    .yt-grid, .yt-vides-list, .yt-shorts-list {
+    .yt-vides-list, .yt-grid {
         grid-template-columns: 1fr;
+
     }
 
     .yt-aside__fixed {
@@ -677,13 +701,23 @@ img {
         display: none;
     }
 
+    .yt-vides-list__item:hover {
+        transform: none;
+
+    }
+
+    .yt-shorts-list {
+        grid-template-columns: 1fr;
+    }
+
+
 }
 
 /* here goes meadia query for Mobile end */
 
 
 /* here goes meadia query for tablet start */
-/* @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
 
     .yt-grid {
         grid-template-columns: 1fr;
@@ -697,9 +731,10 @@ img {
         height: fit-content;
     }
 
-    .yt-shorts-list, .yt-vides-list {
+    .yt-vides-list {
         grid-template-columns: 1fr 1fr;
     }
+
 
     .yt-center {
         display: none;
@@ -708,9 +743,9 @@ img {
     .yt-aside {
         display: none;
     }
-} */
+}
 
-/* 
+
 @media only screen and (min-device-width : 1025px) and (max-device-width : 1400px) {
     .yt-grid {
         grid-template-columns: 240px 1fr;
@@ -724,6 +759,6 @@ img {
         margin-right: 0;
     }
 
-} */
+}
 
 /* here goes meadia query for tablet start */
