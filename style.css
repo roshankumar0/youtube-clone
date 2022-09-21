@@ -320,7 +320,7 @@ i.fa-solid.fa-microphone {
     position: sticky;
     top: 55px;
     z-index: 4;
-    width: 1110px;
+    width: 846px;
 }
 
 .yt-filter-bar::-webkit-scrollbar {
@@ -370,12 +370,8 @@ i.fa-solid.fa-microphone {
 }
 
 .yt-vides-list {
-    margin-left: 8px;
-    margin-right: 8px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 24px;
     border-bottom: 4px solid var(--yt-border);
     color: #606060;
     font-family: "Roboto", "Arial", sans-serif;
@@ -535,11 +531,8 @@ img {
 }
 
 .yt-vides-list__item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-
-
+    margin-left: 16px;
+    margin-bottom: 40px;
 }
 
 .yt-shorts-list img {
@@ -696,13 +689,16 @@ img {
         border: none;
 
     }
-    .yt-main-content{
+
+    .yt-main-content {
         padding: 0;
-        margin: 0 10px;
+        margin: 10px;
     }
-    .yt-shorts-list{
+
+    .yt-shorts-list {
         padding: 0;
     }
+
     .yt-aside__fixed {
         position: unset;
         width: min(100%, 100%);
