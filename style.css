@@ -33,14 +33,14 @@
     height: 56px;
     padding: 0 24px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    z-index: 9999;
+    z-index: 11;
     background-color: var(--yt-spec-brand-background-primary);
     position: sticky;
     top: 0;
-    background-color: #fff;
+    right: 0;
+    left: 0;
 }
 
 .youtube-logo {
@@ -158,6 +158,7 @@ i.fa-solid.fa-microphone {
     line-height: 16px;
 
 }
+
 .yt-header__right i {
     font-size: 16px;
     margin: 0 20px;
@@ -319,9 +320,7 @@ i.fa-solid.fa-microphone {
     position: sticky;
     top: 55px;
     z-index: 4;
-    width: 1130px;
-
-
+    width: 1110px;
 }
 
 .yt-filter-bar::-webkit-scrollbar {
@@ -515,7 +514,14 @@ img {
     display: flex;
 }
 
-.yt-profile-img img {
+.yt-profile-img {
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.yt-vides-list__item .yt-profile-img img {
     border-radius: 50%;
     margin-top: 12px;
     margin-right: 12px;
@@ -532,7 +538,7 @@ img {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-  
+
 
 }
 
@@ -687,9 +693,16 @@ img {
 
     .yt-vides-list, .yt-grid {
         grid-template-columns: 1fr;
+        border: none;
 
     }
-
+    .yt-main-content{
+        padding: 0;
+        margin: 0 10px;
+    }
+    .yt-shorts-list{
+        padding: 0;
+    }
     .yt-aside__fixed {
         position: unset;
         width: min(100%, 100%);
@@ -713,12 +726,20 @@ img {
     .yt-shorts-list {
         grid-template-columns: 1fr;
     }
-    .yt-filter-bar{
+
+    .yt-filter-bar {
         display: none;
     }
+
     .yt-vides-list {
-              margin: 0;
+        margin: 0;
         padding: 0;
+    }
+
+    .yt-shorts {
+        justify-content: space-between;
+        margin: 24px 0;
+
     }
 
 
@@ -744,6 +765,8 @@ img {
 
     .yt-vides-list {
         grid-template-columns: 1fr 1fr;
+        border: none;
+        margin: 0;
     }
 
 
@@ -751,26 +774,17 @@ img {
         display: none;
     }
 
-    .yt-aside,.yt-filter-bar {
+    .yt-aside, .yt-filter-bar {
         display: none;
-    }
-    
-}
-
-
-@media (min-device-width : 1025px) {
-    .yt-grid {
-        grid-template-columns: 240px 1fr;
     }
 
     .yt-shorts-list {
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .yt-center {
-        margin-right: 0;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0;
     }
 
 }
+
+
 
 /* here goes meadia query for tablet start */
