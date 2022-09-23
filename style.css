@@ -370,12 +370,8 @@ i.fa-solid.fa-microphone {
 }
 
 .yt-vides-list {
-    margin-left: 8px;
-    margin-right: 8px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 24px;
     border-bottom: 4px solid var(--yt-border);
     color: #606060;
     font-family: "Roboto", "Arial", sans-serif;
@@ -497,7 +493,7 @@ img {
 
 
 .yt-img-element.is-hovering+.yt-show-now {
-    display: inline-block;
+    display:none;
 }
 
 .yt-show-now h2 {
@@ -535,11 +531,8 @@ img {
 }
 
 .yt-vides-list__item {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-
-
+    margin-left: 16px;
+    margin-bottom: 40px;
 }
 
 .yt-shorts-list img {
@@ -684,30 +677,53 @@ img {
     display: flex;
 }
 
+.yt-mobile-responsive {
+    display: none;
+}
+
 /* here goes yt-main-content end */
 /* here goes meadia query for Mobile start */
 @media (max-device-width : 480px) {
+
+    .yt-mobile {
+        display: block;
+    }
+
+    .yt-mobile li {
+        display: block;
+        width: 100%;
+       
+    }
+
     .youtube-logo {
         display: none;
     }
 
-    .yt-vides-list, .yt-grid {
+    .yt-vides-list {
         grid-template-columns: 1fr;
         border: none;
 
     }
-    .yt-main-content{
-        padding: 0;
-        margin: 0 10px;
+
+    .yt-grid {
+        grid-template-columns: 72px 1fr;
     }
-    .yt-shorts-list{
+
+    .yt-main-content {
+        padding: 0;
+        margin: 10px;
+    }
+
+    .yt-shorts-list {
         padding: 0;
     }
+
     .yt-aside__fixed {
         position: unset;
         width: min(100%, 100%);
         margin-bottom: 20px;
         height: fit-content;
+        display: none;
     }
 
     .yt-center {
@@ -788,3 +804,41 @@ img {
 
 
 /* here goes meadia query for tablet start */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .yt-mobile {
+   
+}
+
+.yt-mobile li {
+    width: 100%;
+    padding: 16px 0 14px;
+    outline: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+svg.style-scope.yt-icon{
+    height: 24px;
+} */
