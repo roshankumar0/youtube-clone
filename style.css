@@ -320,7 +320,7 @@ i.fa-solid.fa-microphone {
     position: sticky;
     top: 55px;
     z-index: 4;
-    width: 846px;
+    width: 1110px;
 }
 
 .yt-filter-bar::-webkit-scrollbar {
@@ -493,7 +493,7 @@ img {
 
 
 .yt-img-element.is-hovering+.yt-show-now {
-    display: inline-block;
+    display:none;
 }
 
 .yt-show-now h2 {
@@ -677,17 +677,36 @@ img {
     display: flex;
 }
 
+.yt-mobile-responsive {
+    display: none;
+}
+
 /* here goes yt-main-content end */
 /* here goes meadia query for Mobile start */
 @media (max-device-width : 480px) {
+
+    .yt-mobile {
+        display: block;
+    }
+
+    .yt-mobile li {
+        display: block;
+        width: 100%;
+       
+    }
+
     .youtube-logo {
         display: none;
     }
 
-    .yt-vides-list, .yt-grid {
+    .yt-vides-list {
         grid-template-columns: 1fr;
         border: none;
 
+    }
+
+    .yt-grid {
+        grid-template-columns: 72px 1fr;
     }
 
     .yt-main-content {
@@ -704,6 +723,7 @@ img {
         width: min(100%, 100%);
         margin-bottom: 20px;
         height: fit-content;
+        display: none;
     }
 
     .yt-center {
@@ -784,3 +804,41 @@ img {
 
 
 /* here goes meadia query for tablet start */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .yt-mobile {
+   
+}
+
+.yt-mobile li {
+    width: 100%;
+    padding: 16px 0 14px;
+    outline: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+svg.style-scope.yt-icon{
+    height: 24px;
+} */
