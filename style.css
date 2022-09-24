@@ -6,6 +6,9 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: scroll;
+}
 
 :root {
     --yt-font-family: "Roboto", "Arial", sans-serif;
@@ -30,14 +33,13 @@
 
 /* here goes header start */
 .yt-header {
-    height: 56px;
     padding: 0 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 11;
     background-color: var(--yt-spec-brand-background-primary);
-    position: sticky;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -65,12 +67,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    flex: 0 1 728px;
-    min-width: 0px;
-    height: 40px;
+    flex: 1 1 728px;
     background: var(--yt-searchbox-background-color);
-    margin-left: auto;
-    margin-right: 40px;
+    max-width: 728px;
+
 
 }
 
@@ -176,7 +176,8 @@ i.fa-solid.fa-microphone {
 .yt-grid {
     display: grid;
     grid-template-columns: 240px 1fr;
-    background: #f0f0f0;
+    margin-top: 150px;
+
 }
 
 .yt-aside {
@@ -303,61 +304,53 @@ i.fa-solid.fa-microphone {
 
 /* here goes yt-main-content start */
 .yt-main-content {
-    padding: 10px;
-    padding-right: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-rows: 56px 1fre;
 }
 
 .yt-filter-bar {
     display: flex;
     align-items: center;
-    overflow: auto;
-    white-space: nowrap;
     border-top: 1px solid var(--yt-border);
     border-bottom: 1px solid var(--yt-border);
-    margin-top: -10px;
-    background: #fff;
-    margin-left: -12px;
-    position: sticky;
-    top: 55px;
-    z-index: 4;
-    width: 1110px;
 }
 
-.yt-filter-bar::-webkit-scrollbar {
+.yt-filter-searching {
+    z-index: 10;
+    position: fixed;
+    top: 56px;
+    background-color: #fff;
+    overflow: auto;
+    position: fixed;
+    width: 100vw;
+
+
+}
+
+.yt-filter-searching::-webkit-scrollbar {
     width: 1px;
+
 }
 
 .yt-filter-bar li {
-    list-style: none;
-
-}
-
-.yt-filter-bar li a {
+    display: flex;
+    align-items: center;
     height: 32px;
-    min-width: 12px;
     padding: 0 10px;
     border-radius: 16px;
-    box-sizing: border-box;
-    outline: none;
-    overflow: hidden;
     cursor: pointer;
-    user-select: none;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    display: inline-flex;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0.2px;
     font-family: var(--yt-font-family);
     text-transform: capitalize;
-    text-decoration: none;
-    color: var(--yt-text-primary);
     background: var(--yt-background);
     transition: background-color 0.5s cubic-bezier(0.05, 0, 0, 1);
     margin: 12px;
+    white-space: nowrap;
 }
 
 .yt-filter-bar li .active {
@@ -493,7 +486,7 @@ img {
 
 
 .yt-img-element.is-hovering+.yt-show-now {
-    display:none;
+    display: none;
 }
 
 .yt-show-now h2 {
@@ -677,9 +670,7 @@ img {
     display: flex;
 }
 
-.yt-mobile-responsive {
-    display: none;
-}
+
 
 /* here goes yt-main-content end */
 /* here goes meadia query for Mobile start */
@@ -692,7 +683,7 @@ img {
     .yt-mobile li {
         display: block;
         width: 100%;
-       
+
     }
 
     .youtube-logo {
@@ -727,7 +718,7 @@ img {
     }
 
     .yt-center {
-        display: none;
+        /* display: none; */
     }
 
     .yt-aside {
@@ -744,7 +735,7 @@ img {
     }
 
     .yt-filter-bar {
-        display: none;
+        /* display: none; */
     }
 
     .yt-vides-list {
@@ -791,7 +782,7 @@ img {
     }
 
     .yt-aside, .yt-filter-bar {
-        display: none;
+        /* display: none; */
     }
 
     .yt-shorts-list {
