@@ -757,28 +757,48 @@ img {
 
 /* here goes meadia query for tablet start */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
-
     .yt-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 72px 1fr;
 
     }
 
-    .yt-aside__fixed {
-        position: unset;
-        width: min(100%, 100%);
-        margin-bottom: 20px;
-        height: fit-content;
+    .yt-aside li {
+        display: flex;
+        flex-direction: column;
+        height: 80px;
+        background-color: transparent;
+        width: 72px;
+        padding: 16px 0 14px;
+        outline: 0;
+        align-items: end;
+
+    }
+    .yt-aside li a{
+        font-size: 10px;
+        align-self: center;
     }
 
     .yt-vides-list {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         border: none;
         margin: 0;
     }
 
+    .yt-aside__fixed {
+        width: 72px;
 
-    .yt-center {
+    }
+
+    .yt-footer, .yt-aside-navbar {
         display: none;
+    }
+
+    .yt-iPaid {
+        display: block;
+    }
+
+    .yt-header__right {
+        min-width: 160px;
     }
 
     .yt-aside, .yt-filter-bar {
