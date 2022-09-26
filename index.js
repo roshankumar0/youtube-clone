@@ -1,22 +1,16 @@
 let bars = document.getElementById("bars");
-let aside = document.getElementById("aside")
+let aside = document.getElementById("aside");
+let ipaid= document.querySelector("#iPaid ")
+let ytAside =document.getElementById("yt-aside")
 bars.addEventListener('click', function () {
-    if (aside.style.display !=="none") {
-        aside.style.display = "none";
-        // aside.style.transform = "translateX(100%)"
-
-    }
+    if (ytAside.style.display ==="none") {
+        ytAside.style.display = "none";
+        ipaid.style.display="none"
+          }
     else {
-        aside.style.display = "block"
+        ytAside.style.display = "block"
+        ipaid.style.display="block"
     }
-})
-
-
-
-let showcase=document.querySelector(".yt-show-now ");
-showcase.addEventListener('mouseover', function show (e){
-alert('its working');
-e.target.id
 })
 
 
